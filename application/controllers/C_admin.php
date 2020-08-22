@@ -131,7 +131,7 @@ class C_admin extends CI_Controller {
                }else {
                     $data =[
                         'no_induk'     =>$this->input->post('no_induk'),
-                        'nama'         =>$this->input->post('nama'        ),
+                        'nama'         =>$this->input->post('nama'),
                         'jenis_kelamin'=>$this->input->post('jenis_kelamin'),
                         'tgl_lahir'    =>$this->input->post('tgl_lahir'),
                         'alamat'       =>$this->input->post('alamat'),

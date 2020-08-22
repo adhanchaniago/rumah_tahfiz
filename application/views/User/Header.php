@@ -61,18 +61,16 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="<?=base_url();?>c_admin"><i class="fa fa-home"></i> Home <span class="fa fa-chevron"></span></a>
+                  <li><a href="<?=base_url();?>c_user"><i class="fa fa-home"></i> Home <span class="fa fa-chevron"></span></a>
           
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Data <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="<?=base_url();?>c_admin/v_tb_siswa">Data Siswa</a></li>      
-                    </ul>
-                  </li>   
+                  <li><a href="<?=base_url();?>c_user/v_tb_user"><i class="fa fa-book"></i> Laporan hafalan <span class="fa fa-chevron"></span></a>
+              </li>
+     
+             
                   <li><a href="<?=base_url();?>c_login/logout"><i class="fa fa-power-off"></i> Logout <span class="fa fa-chevron"></span></a>    
                 </ul>
-              </div>
-         
+              </div> 
             </div>
             <!-- /sidebar menu -->
 
