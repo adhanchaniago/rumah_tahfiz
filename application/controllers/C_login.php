@@ -22,8 +22,8 @@ class C_login extends CI_Controller {
 
     }
 
-    //buat akun
-    public function make_account(Type $var = null)
+    //buat akun user
+    public function make_account()
     {
         // buat array data yang akan di input
         $username = 'admin';
@@ -45,7 +45,7 @@ class C_login extends CI_Controller {
         echo json_encode($response);
     }
     //erivikasi akun user
-    public function verification(Type $var = null)
+    public function verification()
     {
         //ambil username dan passwor dari databse
         $username = $this->input->post('username');
