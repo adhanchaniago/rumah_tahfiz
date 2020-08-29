@@ -97,6 +97,16 @@ class C_admin extends CI_Controller {
                 'image' =>$image['data'],
             ];
             $this->Model_siswa->save_siswa($data);
+
+            $data =[
+                'nama_ayah' =>$this->input->post('nama_ayah'),
+                'pekerjaan_ayah' =>$this->input->post('pekerjaan_ayah'),
+                'nama_ibu' =>$this->input->post('nama_ibu'),
+                'pekerjaan_ibu' =>$this->input->post('pekerjaan_ibu'),
+                'alamat' =>$this->input->post('alamat'),
+                'no_hp' =>$this->input->post('no_hp'),
+            ];
+            $this->Model_siswa->save_walimurid($data);
             // print_r($data);
             $this->session->set_flashdata('success', 'data success in save');
             redirect('c_admin/v_tb_siswa');
@@ -152,5 +162,13 @@ class C_admin extends CI_Controller {
             $this->session->set_flashdata('success','Data berhasil di ubah');
             redirect('c_admin/v_tb_siswa');
         }
-    
-}
+
+        public function v_tb_walimurid()
+        {
+            $data['tb_walimurid']= $this->Model_siswa->get_walimurid();
+            $this->load->view('admin/header');
+            $this->load->view('admin/v_tb_walimurid', $data);
+            $this->load->view('admin/footer');
+
+        }
+    }

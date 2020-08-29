@@ -1,5 +1,5 @@
      <!-- page content -->
-     <div class="right_col" role="main">
+        <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
               <div class="title_left">
@@ -24,7 +24,7 @@
               <div class="col-md-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Data Siswa </h2>
+                    <h2>Tambah Siswa </h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -37,13 +37,13 @@
                   <div class="x_content">
                     <br />
                     <form class="form-horizontal form-label-left input_mask" action="<?=base_url();?>c_admin/save_siswa" method="POST" enctype="multipart/form-data">
-          <!-- <div class="col-md"> -->
+          
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">No induk</label>
+                        <label class="col-md-3 col-sm-3 col-xs-12">No induk</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
                           <input type="text" name="no_induk" class="form-control" placeholder="" required>
                         </div>
-                      </div> 
+                      </div>
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama</label>
@@ -107,98 +107,19 @@
                         </div>
                       </div>
 
-                      <!-- <div class="col-md-12 col-xs-12"> -->
-                <!-- <div class="x_panel"> -->
-                  <div class="x_title">
-                    <h2>Data Walimurid </h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                 
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <br />
-                    <!-- <form class="form-horizontal form-label-left input_mask" action="<?=base_url();?>c_admin/save_walimurid" method="POST" enctype="multipart/form-data">  -->
-          
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama ayah</label>
-                        <div class="col-md-8 col-sm-12 col-xs-12">
-                          <input type="text" name="nama_ayah" class="form-control" placeholder="" required>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Pekerjaan ayah</label>
-                        <div class="col-md-8 col-sm-12 col-xs-12">
-                          <input type="text" name="pekerjaan_ayah" class="form-control" placeholder="" required>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama ibu</label>
-                        <div class="col-md-8 col-sm-12 col-xs-12">
-                          <input type="text" name="nama_ibu" class="form-control" placeholder="" required>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Pekerjaan ibu</label>
-                        <div class="col-md-8 col-sm-12 col-xs-12">
-                          <input type="text" name="pekerjaan_ibu" class="form-control" placeholder="" required>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Alamat</label>
-                        <div class="col-md-8 col-sm-12 col-xs-12">
-                          <input type="text" name="alamat" class="form-control" placeholder="" required>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">telepon</label>
-                        <div class="col-md-8 col-sm-12 col-xs-12">
-                          <input type="text" name="no_hp" class="form-control" placeholder="" required>
-                        </div>
-                      </div>
-
-  
-
          
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                           <a href="<?=base_url();?>c_admin/v_tb_siswa" class="btn btn-primary btn-sm">Kembali</a>
-						   <!-- <button class="btn btn-primary btn-sm" type="reset">Reset</button> -->
-                          <button type="submit" class="btn btn-success btn-sm">Save</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-         
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                          <!-- <a href="<=base_url();?>c_admin/v_tb_siswa" class="btn btn-primary btn-sm">Kembali</a>
 						   <button class="btn btn-primary btn-sm" type="reset">Reset</button>
-                          <button type="submit" class="btn btn-success btn-sm">Submit</button> -->
+                          <button type="submit" class="btn btn-success btn-sm">Submit</button>
                         </div>
                       </div>
                     </form>
                   </div>
                 </div>
               </div>
-
-
-                                           <!-- data orang tua -->
-
-              
             </div>
         
           </div>

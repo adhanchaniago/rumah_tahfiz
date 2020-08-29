@@ -38,6 +38,19 @@ class Model_siswa extends CI_Model
         $this->db->update('tb_siswa',$data);
     }
 
+    public function save_walimurid($data)
+    {
+        $this->db->insert('tb_walimurid', $data);
+    }
+
+    public function get_walimurid()
+    {
+        $this->db->from('tb_walimurid');
+        $this->db->order_by('id_walimurid', 'desc');
+        return $this->db->get()->result_array();
+
+    }
+
 
 }
  

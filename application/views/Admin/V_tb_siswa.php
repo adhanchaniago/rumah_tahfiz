@@ -3,20 +3,11 @@
         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
-              <div class="title_left">
-                <h3>Users <small>Some examples to get you started</small></h3>
-              </div>
+              <!-- <div class="title_left">
+                <h3>Data Siswa</h3>
+              </div> -->
 
-              <div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Go!</button>
-                    </span>
-                  </div>
-                </div>
-              </div>
+   
             </div>
 
             <div class="clearfix"></div>
@@ -123,12 +114,12 @@
                 </div>
               </div>
             </div>
-            <script>
-              //Memunculkan modal edit
+              <!-- //Memunculkan modal edit -->
+            <!-- <script>
             $("#tbl_data").on('click','.btn_edit',function(){
             var id_siswa = $(this).attr('data-id');
             $.ajax({
-                url: '<?php echo base_url(); ?>C_Index/c_admin/ambildataid',
+                url: '<php echo base_url(); ?>C_Index/c_admin/ambildataid',
                 type: 'POST',
                 data: {id_siswa:id_siswa},
                 dataType: 'json',
@@ -141,7 +132,7 @@
                 }
             })
         });
-            </script>
+            </script> -->
           </div>
         </div>
         <!-- /page content -->
