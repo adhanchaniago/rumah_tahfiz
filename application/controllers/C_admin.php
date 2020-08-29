@@ -42,7 +42,7 @@ class C_admin extends CI_Controller {
        // tambah kan fungsi upload  untuk semua
        public function upload($name)
        {
-           $config['upload_path'] = './assets/images/'; //path folder
+           $config['upload_path'] = './uploads/thumb_image/'; //path folder
            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
            $config['encrypt_name'] = true; //nama yang terupload nantinya
    
@@ -52,15 +52,16 @@ class C_admin extends CI_Controller {
                    $gbr = $this->upload->data();
                    // Compress Image
                    $config['image_library'] = 'gd2';
-                   $config['source_image'] = './assets/images/' . $gbr['file_name'];
+                   $config['source_image'] = './uploads/thumb_image/' . $gbr['file_name'];
                    $config['create_thumb'] = false;
                    $config['maintain_ratio'] = false;
                    $config['quality'] = '60%';
                    $config['width'] = 710;
                    $config['height'] = 420;
-                   $config['new_image'] = './assets/images/' . $gbr['file_name'];
+                   $config['new_image'] = './uploads/original_image/' . $gbr['file_name'];
                    $this->load->library('image_lib', $config);
-                   $this->image_lib->resize();
+				   $this->image_lib->resize();
+				   unlink("./uploads/thumb_image/".$gbr['file_name']);
                    $response['data'] = $gbr['file_name'];
                    $response['status'] = 'success';
                    return $response;
@@ -80,8 +81,14 @@ class C_admin extends CI_Controller {
               $data = $this->Model_siswa->getdataid($id_siswa); // Menampung value return dari fungsi getDataByNoinduk ke variabel data
               echo json_encode($data); 
           }
-      }
-
+	  }
+	// check photo for siswa
+	public function photo_check(Type $var = null)
+	{
+		$id=$this->input->post('id');
+		$data=$this->Model_siswa->getdataid($id)[0];
+		echo json_encode($data);
+	}
     public function save_siswa()
     {
         $image = $this->upload('image');

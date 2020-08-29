@@ -26,7 +26,8 @@
     <link href="<?=base_url();?>assets/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
     <link href="<?=base_url();?>assets/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="<?=base_url();?>assets/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
-
+ <!-- jQuery -->
+ <script src="<?= base_url();?>assets/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Custom Theme Style -->
     <link href="<?= base_url();?>assets/build/css/custom.min.css" rel="stylesheet">
   </head>
