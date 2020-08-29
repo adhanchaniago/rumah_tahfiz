@@ -13,7 +13,7 @@ class Model_siswa extends CI_Model
 
     function getdataid($id_siswa){
         $this->db->where('id_siswa',$id_siswa); // where no induk
-        return $this->db->get($this->table)->result(); // me-return hasil dari get tb_siswa
+        return $this->db->get($this->table)->result_array(); // me-return hasil dari get tb_siswa
     }
 
     public function save_siswa($data)
@@ -25,6 +25,12 @@ class Model_siswa extends CI_Model
     {
     $this->db->where('id_siswa', $id);
     return $this->db->get($this->table)->row_array();
+    }
+
+    public function details_siswa($id)
+    {
+        $this->db->where('id_siswa', $id);
+        return $this->db->get($this->table)->row_array();
     }
 
     public function delete_siswa($id)

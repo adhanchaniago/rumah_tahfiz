@@ -26,8 +26,8 @@
     <link href="<?=base_url();?>assets/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
     <link href="<?=base_url();?>assets/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="<?=base_url();?>assets/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
- <!-- jQuery -->
- <script src="<?= base_url();?>assets/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- jQuery -->
+    <script src="<?= base_url();?>assets/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Custom Theme Style -->
     <link href="<?= base_url();?>assets/build/css/custom.min.css" rel="stylesheet">
   </head>
@@ -38,7 +38,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>E-Tahfiz</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -50,7 +50,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>John Doe</h2>
+                <h2>Admin</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -65,6 +65,7 @@
                   <li><a href="<?=base_url();?>c_admin"><i class="fa fa-home"></i> Home <span class="fa fa-chevron"></span></a>
                   <li><a href="<?=base_url();?>c_admin/v_tb_siswa"><i class="fa fa-edit"></i> Pengelolaan siswa <span class="fa fa-chevron"></span></a>
                   <li><a href="<?=base_url();?>c_admin/v_tb_walimurid"><i class="fa fa-edit"></i> Data walimurid <span class="fa fa-chevron"></span></a>
+                  <li><a href="<?=base_url();?>c_admin/d"><i class="fa fa-edit"></i> Pengelolaan nilai <span class="fa fa-chevron"></span></a>
           
                   </li>
                   <!-- <li><a><i class="fa fa-edit"></i> Data <span class="fa fa-chevron-down"></span></a>

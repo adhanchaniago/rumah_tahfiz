@@ -51,7 +51,7 @@
                           <th>Nama Ayah</th>
                           <th>Pekerjaan Ayah</th>
                           <th>Nama Ibu</th>
-                          <th>Pekerjaan ibu</th>
+                          <th>Pekerjaan Ibu</th>
                           <th>alamat</th>
                           <th>Telepon</th>
                           <th>Action</th>

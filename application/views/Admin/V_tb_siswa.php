@@ -61,6 +61,7 @@
 									<th>Status</th>
 									<th>Telepon</th>
 									<th>Foto</th>
+									<th>Details Siswa</th>
 									<th>Action</th>
 								</tr>
 							</thead>
@@ -80,9 +81,11 @@
 
 									<td>
 										<button type="button" class="btn btn-warning btn-xs " onclick="show_photo('<?=$value['id_siswa']?>')">Klik foto </button>
-
-									</td>
-									<td>
+                 					 </td>
+                			  <td>
+								    <a href="<?php echo base_url(); ?>c_admin/details_siswa/<?php echo $value['id_siswa']; ?>"
+											class="btn btn-success btn-xs"> <i class="fa fa-search-plus"> Details</i> </a></td>
+				     		  <td>
 										<a href="<?php echo base_url(); ?>c_admin/edit_siswa/<?php echo $value['id_siswa']; ?>"
 											class="btn btn-info btn-xs"> <i class="fa fa-wrench"></i> </a>
 										<a href="<?php echo base_url(); ?>c_admin/delete_siswa/<?= $value['id_siswa']; ?>"
@@ -91,7 +94,6 @@
 												class="fa fa-trash"></i> </a>
 									</td>
 								</tr>
-
 								<?php endforeach;?>
 							</tbody>
 						</table>
@@ -108,16 +110,14 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-
 				<h5 class="modal-title" id="exampleModalLabel">Foto</h5>
-
 			</div>
 			<div class="modal-body">
 				<div class="form-group" id="photo-here">
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>

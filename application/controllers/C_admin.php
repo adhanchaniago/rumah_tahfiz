@@ -85,33 +85,41 @@ class C_admin extends CI_Controller {
 	// check photo for siswa
 	public function photo_check(Type $var = null)
 	{
-		$id=$this->input->post('id');
-		$data=$this->Model_siswa->getdataid($id)[0];
+		$id = $this->input->post('id');
+		$data = $this->Model_siswa->getdataid($id)[0];
 		echo json_encode($data);
 	}
     public function save_siswa()
     {
+        $no_induk = $this->input->post('no_induk'); // cek no induk tidak boleh sama
+        $sql      = $this->db->query("select no_induk from tb_siswa where no_induk = '$no_induk' ");
+        $check_no_induk = $sql->num_rows();
+        if ($check_no_induk > 0) {
+            $this->session->set_flashdata('error','No induk sudah ada');
+            redirect('c_admin/v_tb_siswa');
+             }
+             
         $image = $this->upload('image');
         if ($image['status']=='success') {
             $data =[
-                'no_induk' =>$this->input->post('no_induk'),
-                'nama' =>$this->input->post('nama'),
+                'no_induk'      =>$this->input->post('no_induk'),
+                'nama'          =>$this->input->post('nama'),
                 'jenis_kelamin' =>$this->input->post('jenis_kelamin'),
-                'tgl_lahir' =>$this->input->post('tgl_lahir'),
-                'alamat' =>$this->input->post('alamat'),
-                'status' =>$this->input->post('status'),
-                'no_hp' =>$this->input->post('no_hp'),
-                'image' =>$image['data'],
+                'tgl_lahir'     =>$this->input->post('tgl_lahir'),
+                'alamat'        =>$this->input->post('alamat'),
+                'status'        =>$this->input->post('status'),
+                'no_hp'         =>$this->input->post('no_hp'),
+                'image'         =>$image['data'],
             ];
             $this->Model_siswa->save_siswa($data);
-
+// input untuk data walimurid
             $data =[
-                'nama_ayah' =>$this->input->post('nama_ayah'),
+                'nama_ayah'      =>$this->input->post('nama_ayah'),
                 'pekerjaan_ayah' =>$this->input->post('pekerjaan_ayah'),
-                'nama_ibu' =>$this->input->post('nama_ibu'),
-                'pekerjaan_ibu' =>$this->input->post('pekerjaan_ibu'),
-                'alamat' =>$this->input->post('alamat'),
-                'no_hp' =>$this->input->post('no_hp'),
+                'nama_ibu'       =>$this->input->post('nama_ibu'),
+                'pekerjaan_ibu'  =>$this->input->post('pekerjaan_ibu'),
+                'alamat'         =>$this->input->post('alamat'),
+                'no_hp'          =>$this->input->post('no_hp'),
             ];
             $this->Model_siswa->save_walimurid($data);
             // print_r($data);
@@ -128,6 +136,14 @@ class C_admin extends CI_Controller {
             $data['edit'] = $this->Model_siswa->edit_siswa($id);
             $this->load->view('admin/header');
             $this->load->view('admin/v_edit_siswa',$data);
+            $this->load->view('admin/footer');
+        }
+
+        public function details_siswa($id)
+        {
+            $data ['details_siswa'] = $this->Model_siswa->details_siswa($id);
+            $this->load->view('admin/header');
+            $this->load->view('admin/v_details_siswa', $data);
             $this->load->view('admin/footer');
         }
     
