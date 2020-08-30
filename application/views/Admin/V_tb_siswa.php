@@ -82,11 +82,13 @@
 									<td>
 										<button type="button" class="btn btn-warning btn-xs " onclick="show_photo('<?=$value['id_siswa']?>')">Klik foto </button>
                  					 </td>
-                			  <td>
+                				    <td>
 								    <a href="<?php echo base_url(); ?>c_admin/details_siswa/<?php echo $value['id_siswa']; ?>"
-											class="btn btn-success btn-xs"> <i class="fa fa-search-plus"> Details</i> </a></td>
-				     		  <td>
-										<a href="<?php echo base_url(); ?>c_admin/edit_siswa/<?php echo $value['id_siswa']; ?>"
+											class="btn btn-success btn-xs"> <i class="fa fa-search-plus"> Details</i> </a>
+							        </td>
+				     		
+							  	    <td>
+									<a href="<?php echo base_url(); ?>c_admin/edit_siswa/<?php echo $value['id_siswa']; ?>"
 											class="btn btn-info btn-xs"> <i class="fa fa-wrench"></i> </a>
 										<a href="<?php echo base_url(); ?>c_admin/delete_siswa/<?= $value['id_siswa']; ?>"
 											onclick="return confirm('Apakah Anda Ingin Menghapus Data <?=$value['nama'];?>');"
@@ -134,7 +136,6 @@
 					<img style="width: 560px;height: 300px; border-radius:50%"
 						src="<?=base_url();?>uploads/original_image/`+response.image+`">`);
 				$("#modal-photo").modal("show");
-
 			}
 		});
 	 }
