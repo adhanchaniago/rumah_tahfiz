@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Model_siswa extends CI_Model 
 {
-	public $table='tb_siswa';
+	private $table='tb_siswa';    //private hanya berlaku untuk class itu sendiri
     public function tampil_siswa()
     {
         $this->db->from($this->table);
@@ -57,6 +57,8 @@ class Model_siswa extends CI_Model
         return $this->db->get()->result_array();
 
     }
+
+    
 
 
 }
