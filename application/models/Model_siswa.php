@@ -29,8 +29,14 @@ class Model_siswa extends CI_Model
 
     public function details_siswa($id)
     {
-        $this->db->where('id_siswa', $id);
-        return $this->db->get($this->table)->row_array();
+        $this->db->select('*');
+        $this->db->from('tb_siswa');
+        $this->db->join('tb_siswa','tb_siswa.id_siswa = tb_walimurid.id_walimurid');
+        return $this->db->get()->result_array();
+
+
+        // $this->db->where('id_siswa', $id);
+        // return $this->db->get($this->table)->row_array();
     }
 
     public function delete_siswa($id)
@@ -58,7 +64,7 @@ class Model_siswa extends CI_Model
 
     }
 
-    
+
 
 
 }
