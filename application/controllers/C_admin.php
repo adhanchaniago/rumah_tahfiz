@@ -19,8 +19,8 @@ class C_admin extends CI_Controller {
 
 	public function index()
 	{
-        $judul ['judul'] = 'Halaman home';  // title judul
 
+        $judul ['judul'] = 'Halaman home';  // title judul
         $this->load->view('admin/header', $judul);
         $this->load->view('admin/dashboard');
         $this->load->view('admin/footer');
@@ -29,7 +29,6 @@ class C_admin extends CI_Controller {
     public function v_tb_siswa()
     {
         $judul ['judul'] = 'Halaman Siswa';  // title judul
-
         $data['tb_siswa'] = $this->Model_siswa->tampil_siswa();
         $this->load->view('admin/header', $judul);
         $this->load->view('admin/v_tb_siswa', $data);
@@ -39,7 +38,6 @@ class C_admin extends CI_Controller {
     public function tambah_siswa()
     {
         $judul ['judul'] = 'Input Data Siswa';  // title judul
-
         $this->load->view('admin/header', $judul);
         $this->load->view('admin/v_tambah_siswa');
         $this->load->view('admin/footer');
@@ -140,7 +138,6 @@ class C_admin extends CI_Controller {
         public function edit_siswa($id)
         {
             $judul ['judul'] = 'Edit siswa';  // title judul
-
             $data['edit'] = $this->Model_siswa->edit_siswa($id);
             $this->load->view('admin/header', $judul);
             $this->load->view('admin/v_edit_siswa',$data);
@@ -150,7 +147,6 @@ class C_admin extends CI_Controller {
         public function details_siswa($id)
         {
             $judul ['judul'] = 'Details siswa';  // title judul
-
             $data ['details_siswa'] = $this->Model_siswa->details_siswa($id);
             $this->load->view('admin/header', $judul);
             $this->load->view('admin/v_details_siswa', $data);
@@ -207,7 +203,6 @@ class C_admin extends CI_Controller {
         public function v_tb_walimurid()
         {
             $judul ['judul'] = 'Halaman Walimurid';  // title judul
-
             $data['tb_walimurid']= $this->Model_siswa->get_walimurid();
             $this->load->view('admin/header', $judul);
             $this->load->view('admin/v_tb_walimurid', $data);

@@ -56,7 +56,7 @@
 									<th>No induk</th>
 									<th>Nama</th>
 									<th>Jenis Kelamin</th>
-									<th>Tgl lhr</th>
+									<th>Tanggal lahir</th>
 									<th>Alamat</th>
 									<th>Status</th>
 									<th>Telepon</th>
@@ -89,7 +89,7 @@
 				     		
 							  	    <td>
 									<a href="<?php echo base_url(); ?>c_admin/edit_siswa/<?php echo $value['id_siswa']; ?>"
-											class="btn btn-info btn-xs"> <i class="fa fa-wrench"></i> </a>
+											class="btn btn-primary btn-xs"> <i class="fa fa-wrench"></i> </a>
 										<a href="<?php echo base_url(); ?>c_admin/delete_siswa/<?= $value['id_siswa']; ?>"
 											onclick="return confirm('Apakah Anda Ingin Menghapus Data <?=$value['nama'];?>');"
 											class="btn btn-danger btn-xs" data-popup="tooltip" data-placement="top" title="Hapus Data"><i
