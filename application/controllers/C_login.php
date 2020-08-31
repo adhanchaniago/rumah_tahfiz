@@ -48,10 +48,12 @@ class C_login extends CI_Controller {
     public function verification()
     {
         //ambil username dan passwor dari databse
-        $username = $this->input->post('username');
-        $password = $this->input->post('password'); 
+        // $username = $this->input->post('username');
+        // $password = $this->input->post('password'); 
+        $username=htmlspecialchars($this->input->post('username',TRUE),ENT_QUOTES);
+        $password=htmlspecialchars($this->input->post('password',TRUE),ENT_QUOTES);
         
-        //cek data dke databse ada atau tida data username
+        //cek data kke databse ada atau tida data username
         $check_username = $this->M_login->check_account($username,hash('md5',$password));
         //jika tidak ada kembali ke login dan beri aler
         if ($check_username->num_rows() == '0') {   //jika username di hitung sama dengan 0
