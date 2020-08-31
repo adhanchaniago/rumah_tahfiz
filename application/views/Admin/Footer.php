@@ -64,7 +64,7 @@
         format: 'DD.MM.YYYY'
     });
 
-    // pesan berwatu
+    // pesan berwatu datatabel
     $('#example2').DataTable()
     window.setTimeout(function(){
     $("#pesan").fadeTo(1000,0).slideUp(500,function () { 

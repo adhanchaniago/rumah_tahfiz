@@ -53,12 +53,12 @@ class C_login extends CI_Controller {
         $username=htmlspecialchars($this->input->post('username',TRUE),ENT_QUOTES);
         $password=htmlspecialchars($this->input->post('password',TRUE),ENT_QUOTES);
         
-        //cek data kke databse ada atau tida data username
+        //cek data ke databse ada atau tida data username
         $check_username = $this->M_login->check_account($username,hash('md5',$password));
         //jika tidak ada kembali ke login dan beri aler
         if ($check_username->num_rows() == '0') {   //jika username di hitung sama dengan 0
             //beri aler dengan flash
-            $this->session->set_flashdata('error','maaf username tidak terdaftar');
+            $this->session->set_flashdata('error','maaf username dan password salah');
             redirect('c_login');
 
             //jika ada buat sesi login

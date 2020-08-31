@@ -33,8 +33,9 @@
             <form action="<?= base_url();?>c_login/verification/" method="POST">
               <h1>Login</h1>
               <p class="login-box-msg">Sign in to start your session</p>
+
 						<?php if ($this->session->flashdata('error')) :?>
-						<div class="alert alert-danger" role="alert">
+						<div id="pesan" class="alert alert-danger" role="alert">
 							<strong><?= $this->session->flashdata('error'); ?>
 							</strong>
               </div>
