@@ -30,7 +30,7 @@
                     <form class="form-horizontal form-label-left input_mask" action="" method="POST" enctype="multipart/form-data">
           <!-- <div class="col-md"> -->
 
-          <?foreach ($details_siswa as $key => $value) :?>
+          <?php foreach ($details_siswa as $key => $value) :?>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">No induk</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
