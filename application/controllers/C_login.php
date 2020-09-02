@@ -48,16 +48,16 @@ class C_login extends CI_Controller {
     public function verification()
     {
         //ambil username dan passwor dari databse
-        // $username = $this->input->post('username');
-        // $password = $this->input->post('password'); 
-        $username=htmlspecialchars($this->input->post('username',TRUE),ENT_QUOTES);
-        $password=htmlspecialchars($this->input->post('password',TRUE),ENT_QUOTES);
+        $username = $this->input->post('username');
+        $password = $this->input->post('password'); 
+        // $username=htmlspecialchars($this->input->post('username',TRUE),ENT_QUOTES);
+        // $password=htmlspecialchars($this->input->post('password',TRUE),ENT_QUOTES);
         
         //cek data ke databse ada atau tida data username
         $check_username = $this->M_login->check_account($username,hash('md5',$password));
         //jika tidak ada kembali ke login dan beri aler
         if ($check_username->num_rows() == '0') {   //jika username di hitung sama dengan 0
-            //beri aler dengan flash
+            //beri aler dengan flashdata
             $this->session->set_flashdata('error','maaf username dan password salah');
             redirect('c_login');
 
@@ -65,13 +65,13 @@ class C_login extends CI_Controller {
         }else {
             $result = $check_username->row_array(); //ambil satu data dari database
                     //buat array untuk session
-        $ses_data = [
-            'username' => $result['username'],
-            'level' => $result['level'],
-            'id_user' => $result['id_user'],
-            'logged_in'=>true,
-        ];
-    //buat sessionnya
+            $ses_data = [
+                    'username' => $result['username'],
+                    'level' => $result['level'],
+                    'id_user' => $result['id_user'],
+                    'logged_in'=>true,
+                ];
+    //set buat sessionnya 
     $this->session->set_userdata($ses_data);
     //arahkan sesuai level user
     if ($this->session->userdata('level')=='admin') {
