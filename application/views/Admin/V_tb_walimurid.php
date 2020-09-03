@@ -48,6 +48,7 @@
                       <thead>
                         <tr>
                           <th>No</th>
+                          <th>No Induk</th>
                           <th>Nama Ayah</th>
                           <th>Pekerjaan Ayah</th>
                           <th>Nama Ibu</th>
@@ -63,6 +64,7 @@
                           foreach ($tb_walimurid as $key => $value):?>
                         <tr>
                           <td><?= $no++?></td>
+                          <td><?= $value['no_induk']?></td>
                           <td><?= $value['nama_ayah']?></td>
                           <td><?= $value['pekerjaan_ayah']?></td>
                           <td><?= $value['nama_ibu']?></td>

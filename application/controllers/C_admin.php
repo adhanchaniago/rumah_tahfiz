@@ -118,6 +118,7 @@ class C_admin extends CI_Controller {
             $this->Model_siswa->save_siswa($data);
 // input untuk data walimurid
             $data =[
+                'no_induk'      =>$this->input->post('no_induk'),
                 'nama_ayah'      =>$this->input->post('nama_ayah'),
                 'pekerjaan_ayah' =>$this->input->post('pekerjaan_ayah'),
                 'nama_ibu'       =>$this->input->post('nama_ibu'),

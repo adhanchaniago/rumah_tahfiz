@@ -31,7 +31,8 @@ class Model_siswa extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('tb_siswa');
-        $this->db->join('tb_walimurid','tb_walimurid.id_walimurid = tb_siswa.id_siswa');
+        $this->db->join('tb_walimurid','tb_walimurid.no_induk = tb_siswa.no_induk');
+        $this->db->where('tb_siswa.id_siswa', $id);
         return $this->db->get()->result_array();
 
 
