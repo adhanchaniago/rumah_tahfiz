@@ -148,12 +148,12 @@
                 </div>
               </div>
          
-                      <!-- <div class="ln_solid"></div>
+                      <div class="ln_solid"></div>
                  
                     </form>
                   </div>
                 </div>
-              </div> -->
+              </div>
 
 
                                            <!-- data orang tua -->
