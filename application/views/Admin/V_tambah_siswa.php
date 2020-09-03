@@ -111,12 +111,12 @@
                   <div class="x_content">
                     <br />
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">No induk</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
                           <input type="text" name="no_induk" class="form-control" placeholder="" required>
                         </div>
-                      </div>
+                      </div> -->
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama ayah</label>

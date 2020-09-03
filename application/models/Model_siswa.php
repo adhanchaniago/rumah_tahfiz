@@ -34,10 +34,7 @@ class Model_siswa extends CI_Model
         $this->db->join('tb_walimurid','tb_walimurid.no_induk = tb_siswa.no_induk');
         $this->db->where('tb_siswa.id_siswa', $id);
         return $this->db->get()->result_array();
-
-
-        // $this->db->where('id_siswa', $id);
-        // return $this->db->get($this->table)->row_array();
+        
     }
 
     public function delete_siswa($id)

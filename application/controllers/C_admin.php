@@ -118,7 +118,7 @@ class C_admin extends CI_Controller {
             $this->Model_siswa->save_siswa($data);
 // input untuk data walimurid
             $data =[
-                'no_induk'      =>$this->input->post('no_induk'),
+                'no_induk'       =>$this->input->post('no_induk'),
                 'nama_ayah'      =>$this->input->post('nama_ayah'),
                 'pekerjaan_ayah' =>$this->input->post('pekerjaan_ayah'),
                 'nama_ibu'       =>$this->input->post('nama_ibu'),
@@ -152,6 +152,7 @@ class C_admin extends CI_Controller {
             $this->load->view('admin/header', $judul);
             $this->load->view('admin/v_details_siswa', $data);
             $this->load->view('admin/footer');
+            // print_r($data);
         }
     
         public function delete_siswa($id)
