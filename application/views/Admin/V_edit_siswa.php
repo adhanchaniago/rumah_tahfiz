@@ -32,7 +32,7 @@
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">No induk</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <input type="text" name="no_induk" value="<?=$edit['no_induk'];?>" class="form-control" placeholder="" required>
+                          <input type disabled="text" name="no_induk" value="<?=$edit['no_induk'];?>" class="form-control" placeholder="" required>
                         </div>
                       </div>
 
@@ -47,9 +47,8 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Jenis kelamin</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
                           <select name ="jenis_kelamin" value="<?=$edit['jenis_kelamin'];?>" class="form-control" required>
-                            <option value="0">--Pilih Jenis Kelmain--</option>
                             <option>laki-laki</option>
-                            <option>Perempuan</option>
+                             <option>Perempuan</option>
                           </select>
                         </div>
                       </div>
@@ -76,8 +75,7 @@
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Status</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <select name ="status" value="<?=$edit['status'];?>" class="form-control" required>
-                            <option value="0">--Pilih Status Anak--</option>
+                          <select name ="status" value="<?=$edit['status'];?>" class="form-control">
                             <option>Anak kandung</option>
                             <option>Anak tiri</option>
                           </select>

@@ -29,21 +29,22 @@
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">No induk</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <input type="text" name="no_induk" class="form-control" placeholder="" required>
+                          <input type="text" name="no_induk" class="form-control" required placeholder="" value="<?= set_value('no_induk');?>" >
+                          <?= form_error('no_induk');?>
                         </div>
                       </div> 
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <input type="text" name="nama" class="form-control" placeholder="" required>
+                          <input type="text" name="nama" class="form-control"required placeholder="" value="<?= set_value('nama');?>">
                         </div>
                       </div>
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Jenis kelamin</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <select name="jenis_kelamin" class="form-control" required>
+                          <select name="jenis_kelamin" required class="form-control" >
                             <option value="0">--Pilih Jenis Kelmain--</option>
                             <option>laki-laki</option>
                             <option>Perempuan</option>
@@ -55,7 +56,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Tgl lahir</label>
                         <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class='input-group date' id='myDatepicker2'>
-                            <input type='text' name="tgl_lahir" class="form-control" />
+                            <input type='text' name="tgl_lahir"required class="form-control" />
                             <span class="input-group-addon">
                                <span class="glyphicon glyphicon-calendar"></span>
                             </span>
@@ -66,14 +67,14 @@
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Alamat</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <textarea name="alamat" id="alamat" class="form-control" cols=40" rows="2"></textarea>
+                          <textarea name="alamat" id="alamat"required class="form-control" cols=40" rows="2"></textarea>
                         </div>
                       </div>
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Status</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <select name="status" class="form-control" required>
+                          <select name="status"required class="form-control" >
                             <option value="0">--Pilih Status Anak--</option>
                             <option>Anak kandung</option>
                             <option>Anak tiri</option>
@@ -82,16 +83,16 @@
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">telepon</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Telepon/ Wa</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <input type="text" name="no_hp" class="form-control" placeholder="" required>
+                          <input type="text" name="no_hp"required class="form-control" placeholder="" >
                         </div>
                       </div>
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12"> Image</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <input type="file" name="image"  class="form-control" placeholder="" required>
+                          <input type="file" name="image"required  class="form-control" placeholder="" >
                         </div>
                       </div>
 
@@ -114,21 +115,21 @@
                     <!-- <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">No induk</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <input type="text" name="no_induk" class="form-control" placeholder="" required>
+                          <input type="text" name="no_induk" class="form-control" placeholder="" >
                         </div>
                       </div> -->
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama ayah</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <input type="text" name="nama_ayah" class="form-control" placeholder="" required>
+                          <input type="text" name="nama_ayah"required class="form-control" placeholder="" >
                         </div>
                       </div>
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Pekerjaan Ayah</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <select name="pekerjaan_ayah" class="form-control" required>
+                          <select name="pekerjaan_ayah"required class="form-control" >
                             <option value="0">--Pilih Pekerjaan Ayah--</option>
                             <option>Pns</option>
                             <option>Buruh</option>
@@ -144,14 +145,14 @@
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama Ibu</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <input type="text" name="nama_ibu" class="form-control" placeholder="" required>
+                          <input type="text" name="nama_ibu"required class="form-control" placeholder="" >
                         </div>
                       </div>
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Pekerjaan Ibu</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <select name="pekerjaan_ibu" class="form-control" required>
+                          <select name="pekerjaan_ibu"required class="form-control" >
                             <option value="0">--Pilih Pekerjaan Ibu--</option>
                             <option>Pns</option>
                             <option>Buruh</option>
@@ -166,14 +167,14 @@
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Alamat</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <textarea name="alamat" id="alamat" class="form-control" cols=40" rows="2"></textarea>
+                          <textarea name="alamat" id="alamat"required class="form-control" cols=40" rows="2"></textarea>
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">telepon</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Telepon/ Wa</label>
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                          <input type="text" name="no_hp" class="form-control" placeholder="" required>
+                          <input type="text" name="no_hp"required class="form-control" placeholder="" >
                         </div>
                       </div>
 

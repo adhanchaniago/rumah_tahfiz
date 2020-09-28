@@ -8,6 +8,7 @@ class C_admin extends CI_Controller {
         parent::__construct();
         $this->load->Model('Model_siswa');
         $this->load->library('upload');
+        $this->load->library('form_validation');
         //ini pnting untuk ke amanan login
         if ($this->session->userdata('level') !== 'admin' or
         $this->session->userdata('logged_in') !== true
@@ -37,10 +38,26 @@ class C_admin extends CI_Controller {
 
     public function tambah_siswa()
     {
-        $judul ['judul'] = 'Input Data Siswa';  // title judul
-        $this->load->view('admin/header', $judul);
-        $this->load->view('admin/v_tambah_siswa');
-        $this->load->view('admin/footer');
+        $this->form_validation->set_rules('no_induk','no_induk','required|trim');
+        $this->form_validation->set_rules('nama','nama','required|trim');
+        $this->form_validation->set_rules('jenis_kelamin','jenis_kelamin','required|trim');
+        $this->form_validation->set_rules('tgl_lahir','tgl_lahir','required|trim');
+        $this->form_validation->set_rules('alamat','alamat','required|trim');
+        $this->form_validation->set_rules('status','status','required|trim');
+        $this->form_validation->set_rules('no_hp','no_hp','required|trim');
+        $this->form_validation->set_rules('image','image','required|trim');
+        
+
+        if ($this->form_validation->run()== false)
+         {
+             $judul ['judul'] = 'Input Data Siswa';  // title judul
+             $this->load->view('admin/header', $judul);
+             $this->load->view('admin/v_tambah_siswa');
+             $this->load->view('admin/footer');
+        }else {
+            # code...
+        }
+
     }
 
        // tambah kan fungsi upload  untuk semua
@@ -167,7 +184,7 @@ class C_admin extends CI_Controller {
             $image = $this->upload('image');
             if ($image['status'] == 'success') {
                $data =[
-                   'no_induk'     =>$this->input->post('no_induk'),
+                //    'no_induk'     =>$this->input->post('no_induk'),
                    'nama'         =>$this->input->post('nama'        ),
                    'jenis_kelamin'=>$this->input->post('jenis_kelamin'),
                    'tgl_lahir'    =>$this->input->post('tgl_lahir'),
@@ -178,7 +195,7 @@ class C_admin extends CI_Controller {
                    ];
                }else {
                     $data =[
-                        'no_induk'     =>$this->input->post('no_induk'),
+                        // 'no_induk'     =>$this->input->post('no_induk'),
                         'nama'         =>$this->input->post('nama'),
                         'jenis_kelamin'=>$this->input->post('jenis_kelamin'),
                         'tgl_lahir'    =>$this->input->post('tgl_lahir'),
